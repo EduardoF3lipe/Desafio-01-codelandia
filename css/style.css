@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500&family=Lexend+Deca:wght@300;400;700&display=swap');
+
+
+/* ==================== reset css ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    list-style:none;
+    text-decoration:none;
+}
+
+/* ==================== root ==================== */
+
+:root {
+    --purple: #574AE8;
+    --white: #FFFFFF;
+    --white-200: #F3F5F7;
+    --gray: #717171;
+    --gray-dark: #1A202C;
+    --red:#ff0000;
+    --bg: linear-gradient(283.15deg, #5402BC 0%, #AB4CC6 100%);
+    --bg-mobile: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+    font-size: 62.5%;
+}
+
+
+html,
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+}
+
+/* ======================================== */
+
+#app__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header,
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white-200);
+}
+
+header {
+    background: linear-gradient(88.27deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+/* ======================================== Header ======================================== */
+
+/* header */
+.header__content,
+.section_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 41px 0 73px;
+}
+
+.header__navigation li a {
+    color: var(--white);
+    font-size: 2.4rem;
+    line-height: 3rem;
+    font-weight: 400;
+}
+
+/* search */
+.search_bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6.2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin-bottom: 41px;
+}
+
+.search_bar input {
+    background: transparent;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.2rem;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    width: 90%;
+    padding-left: 20px;
+}
+
+
+input::placeholder,input {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.5;
+}
+
+.search_bar img {
+    width: 23px;
+    height: auto;
+}
+
+.search_bar button {
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    background: transparent;
+    padding-left: 20px;
+}
+
+
+/* section */
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin: 100px auto;
+    flex-wrap: wrap;
+}
+
+.box__posts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.1);
+    border-radius: 5px;
+    padding: 25px;
+}
+
+
+.posts__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 20px 0;
+}
+
+.posts__info h3 {
+    color: var(--gray);
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 400;
+}
+
+.bx-heart {
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: var(--gray);
+    opacity: 0.7;
+}
+
+.bx-heart:hover {
+    color: var(--purple);
+    transition: all 0.5s;
+    opacity: 1;
+}
+
+
+.posts__subject {
+    display: flex;
+    flex-direction: column;    
+}
+
+.posts__subject h2 {
+    color: var(--gray-dark);
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 3.25rem;
+    padding-bottom: 8px;
+}
+
+.posts__subject p {
+    max-width: 850px;
+    color: var(--gray);
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 3.2rem;
+
+}
+
+/* ======================================== Responsivo ======================================== */
+
+@media (max-width: 900px) {
+
+    .header__content {
+        padding: 0 25px;
+    }
+
+    .posts  {
+        margin: 50px 25px;
+    }
+    
+}
+
+@media (max-width: 500px) {
+
+    .header__navigation li a {
+        font-size: 2.1rem;
+    }
+
+    .search_bar {
+        height: 4.0rem;
+    }
+
+    .search_bar {
+        font-size: 1.4rem;
+        padding: 1.2rem 0;
+        margin-bottom: 60px;
+    }
+
+    .search_bar img {
+        width: 16px;
+        height: 16px;
+    }
+
+    header {
+        background-color: var(--bg-mobile);
+    }
+
+    .posts  {
+        margin: 50px 20px;
+        gap: 2.5rem;
+    }
+
+    .posts__subject h2 {
+        font-size: 1.8rem;
+        line-height: 2.25rem;
+        padding-bottom: 9px;
+    }
+
+    
+    .posts__subject p {
+        font-size: 1.4rem;
+        line-height: 2.6rem;
+    }
+}
